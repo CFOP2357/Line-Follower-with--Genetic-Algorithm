@@ -7,9 +7,12 @@
 import java.util.*;
 
 int population = 50;
+int generations = 150;
 
 ArrayList<Robot> robotGeneration = new ArrayList<Robot>();
 ArrayList<Robot> bestRobot = new ArrayList<Robot>();
+
+PrintWriter best, all;
 
 /*
 Segun la evidencia empirica de Alander (1992) que dice
@@ -17,9 +20,13 @@ que la poblacion debe ser entre l y 2l, por lo tanto la poblacion la asigno a 50
 */
 int generation = 1;
 long fittest = 990000000;
+int numberOfRun = 1;
 
 void setup() {
   size(700, 400);
+  
+  best = createWriter("best.txt");
+  all = createWriter("all.txt");
   
   //poblacion inicial
   for(int i=0; i<population; i++){
@@ -35,17 +42,56 @@ void setup() {
 }
 
 void draw(){
+  
+  //review();
+  
   drawStage();
   
   if(compute()){ //si ya terminaron todos los individuos
     reduction();
     crossover();
     mutation();
+    all.println(numberOfRun + "\t" + generation + "\t" + fittest);
+    all.flush();
+    best.println(numberOfRun + "\t" + fittest
+    + bestRobot.get(0).getGiro()[0] + "\t" + bestRobot.get(0).getGiro()[1] + "\t" + bestRobot.get(0).getGiro()[2] + "\t" + bestRobot.get(0).getGiro()[3] + "\t" 
+    + bestRobot.get(0).getVel() + "\t" + bestRobot.get(0).getD());
+    best.flush();
     generation++;
   }
   
-  delay(1);
+  //delay(100);
   
+}
+
+void review(){
+  if(generation == generations){
+    
+    best.println(numberOfRun + "\t" + fittest
+    + bestRobot.get(0).getGiro()[0] + "\t" + bestRobot.get(0).getGiro()[1] + "\t" + bestRobot.get(0).getGiro()[2] + "\t" + bestRobot.get(0).getGiro()[3] + "\t" 
+    + bestRobot.get(0).getVel() + "\t" + bestRobot.get(0).getD());
+    best.flush();
+    
+    numberOfRun++;
+    println(numberOfRun);
+    
+    //resetear
+    fittest = 990000000;
+    generation = 1;
+    robotGeneration = new ArrayList<Robot>();
+    bestRobot = new ArrayList<Robot>();
+    
+    //poblacion inicial
+    for(int i=0; i<population; i++){
+      robotGeneration.add(new Robot(new int[]{(int)random(-60, 60), (int)random(-60, 60), (int)random(-60, 60), (int)random(-60, 60)}, 
+               (int)random(1, 50), (int)random(2, 16)));
+    }
+    
+    //definir la poblacion inicial como la mejor hasta ahora
+    for(int i=0; i<population; i++){
+      bestRobot.add(robotGeneration.get(i));
+    }
+  }
 }
 
 boolean compute(){ //iterar la poblacion
@@ -62,7 +108,7 @@ boolean compute(){ //iterar la poblacion
 
 void reduction(){  //seleccionar mejor poblacion (se selecciona de forma elitista)
   for(Robot robot: robotGeneration){
-    bestRobot.add(robot);
+    bestRobot.add(robot);  
   }
   
   Collections.sort(bestRobot); 
