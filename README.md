@@ -1,24 +1,23 @@
 # Kinematic control of a mobile Robot with the help of Artificial Intelligence
-=========
 
 *Artificial Intelligence – Facultad de Ingeniería, UASLP*
 
 *Adviser: Dr. José Ignacio Núñez Varela*
 
 Problem statement
-=========
+-----------------
 
 A Robot kinematic has a microprocessor, such as two or more motor actuators, and different sensors that help control the kinematics of this, however, the response of a system is not instantaneous, there is a margin of error in the response of the actuators and there are environmental factors that are variable and cannot be controlled / measured. Therefore, there are many techniques to control systems according to the behavior of sensors and actuators.
 
 Objective
-=========
+-----------------
 
 To implement an optimization searching algorithm (e.g. Genetic Algorithms), based on artificial techniques, which finds the best configuration for getting high speed on a Line Follower.
 
 By COVID situation it was impossible to me to implements a software on a real robot, so I change the approach to a simulation of a line follower.
 
 Work done
-=========
+-----------------
 
 I developed a simulator of a Line Follower which finds its best configuration to follow a line in the lower time possible with Genetic Algorithms. I use Processing for the implementation of this system.
 
@@ -44,8 +43,7 @@ The robot is always moving to the front but its speed can be assigned in the con
 
 To follow the line, robots can change its orientation and see if the sensors are in black or white.
 
-Genetic Algorithm
------------------
+## Genetic Algorithm
 
 <img src="media/image7.png" width="405" height="90" />
 
