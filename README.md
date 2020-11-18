@@ -31,7 +31,8 @@ I developed a simulator of a Line Follower which finds its best
 configuration to follow a line in the lower time possible with Genetic
 Algorithms. I use Processing for the implementation of this system.
 
-![](./media/media/image1.jpeg){width="2.6354166666666665in"
+![C:\\Users\\Golem\\Downloads\\WhatsApp Image 2020-06-10 at
+10.57.17.jpeg](./media/media/image1.jpeg){width="2.6354166666666665in"
 height="1.6400251531058618in"}
 
 The objective on each robot in this system is to follow the ellipse
@@ -49,7 +50,8 @@ possible to know when a robot its outside the track and where the line
 to follow is. When each robot has processed its next moving, the track
 is painted with only white and black.
 
-![](./media/media/image2.jpeg){width="2.34375in"
+![C:\\Users\\Golem\\Downloads\\WhatsApp Image 2020-06-10 at 04.15.18
+(1).jpeg](./media/media/image2.jpeg){width="2.34375in"
 height="1.4389938757655294in"}
 ![](./media/media/image3.png){width="2.301849300087489in"
 height="1.4403390201224846in"}
@@ -223,10 +225,9 @@ References
 ==========
 
 Repository of the project
-[*https://github.com/CFOP/Line-Follower-with--Genetic-Algorithm*](https://github.com/CFOP/Line-Follower-with--Genetic-Algorithm)
+*https://github.com/CFOP/Line-Follower-with--Genetic-Algorithm*
 
-Video of the project
-[*https://www.youtube.com/watch?v=QEgTwicO3s8*](https://www.youtube.com/watch?v=QEgTwicO3s8)
+Video of the project *https://www.youtube.com/watch?v=QEgTwicO3s8*
 
 Tema 2. Algoritmos Genéticos, Abdelmalik Moujahid, Inaki Inza y Pedro
 Larranaga, Departamento de Ciencias de la Computación e Inteligencia
@@ -234,15 +235,13 @@ Artificial, Universidad del País Vasco–Euskal Herriko Unibertsitatea:
 [*http://www.sc.ehu.es/ccwbayes/docencia/mmcc/docs/t2geneticos.pdf*](http://www.sc.ehu.es/ccwbayes/docencia/mmcc/docs/t2geneticos.pdf)
 
 PID control tuning using genetic algorithm, keevitajamees, Youtube,
-9/Oct/2020:
-[*https://www.youtube.com/watch?v=guNk-u9nGdA*](https://www.youtube.com/watch?v=guNk-u9nGdA)
+9/Oct/2020: *https://www.youtube.com/watch?v=guNk-u9nGdA*
 
 Machine Learning Control: Overview, Steve Brunton, YouTube, 10/Jun/2018:
-[*https://www.youtube.com/watch?v=3yU2k8R9JeU&t=20s*](https://www.youtube.com/watch?v=3yU2k8R9JeU&t=20s)
+*https://www.youtube.com/watch?v=3yU2k8R9JeU&t=20s*
 
 Machine Learning Control: Genetic Algorithms, Steve Brunton, YouTube,
-11/Jun/2018:
-[*https://www.youtube.com/watch?v=CZE86BPDqCI*](https://www.youtube.com/watch?v=CZE86BPDqCI)
+11/Jun/2018: *https://www.youtube.com/watch?v=CZE86BPDqCI*
 
 Machine Learning Control: Tuning a PID Controller with Genetic
 Algorithms, Steve Brunton, YouTube, 11/Jun/2018:
