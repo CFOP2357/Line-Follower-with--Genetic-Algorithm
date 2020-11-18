@@ -1,14 +1,17 @@
-Kinematic control of a mobile Robot with the help of Artificial Intelligence
+# Kinematic control of a mobile Robot with the help of Artificial Intelligence
+=========
 
-Artificial Intelligence – Facultad de Ingeniería, UASLP
+*Artificial Intelligence – Facultad de Ingeniería, UASLP*
 
 *Adviser: Dr. José Ignacio Núñez Varela*
 
 Problem statement
+=========
 
 A Robot kinematic has a microprocessor, such as two or more motor actuators, and different sensors that help control the kinematics of this, however, the response of a system is not instantaneous, there is a margin of error in the response of the actuators and there are environmental factors that are variable and cannot be controlled / measured. Therefore, there are many techniques to control systems according to the behavior of sensors and actuators.
 
 Objective
+=========
 
 To implement an optimization searching algorithm (e.g. Genetic Algorithms), based on artificial techniques, which finds the best configuration for getting high speed on a Line Follower.
 
@@ -23,15 +26,13 @@ I developed a simulator of a Line Follower which finds its best configuration to
 
 The objective on each robot in this system is to follow the ellipse limited by a black line in the shortest time possible, if one Robot stop touching the black line then it is said that this one went off the track and I did not achieve his goal.
 
-Track
------
+## Track
 
 For robots processing the track is painted divided on 4 different colors, each one of this represents a different area on it, for example the green part is the area inside the ellipse, with this separation it’s possible to know when a robot its outside the track and where the line to follow is. When each robot has processed its next moving, the track is painted with only white and black.
 
 <img src="media/image2.jpeg" alt="C:\Users\Golem\Downloads\WhatsApp Image 2020-06-10 at 04.15.18 (1).jpeg" width="225" height="138" /> <img src="media/image3.png" width="220" height="138" />
 
-Robot
------
+## Robot
 
 The robot it’s a square with two ‘light sensors’ on it, each sensor can see if one specific pixel of the field is white or not.
 
@@ -83,7 +84,9 @@ I made a graph with the average execution to get the visualization of how the fi
 
 <img src="media/image10.png" width="267" height="160" /> <img src="media/image11.png" width="264" height="158" />
 
-<img src="media/image12.png" width="285" height="171" />I also look for when a solution is find (at the first none of the robots completes the two laps)
+<img src="media/image12.png" width="285" height="171" />
+
+I also look for when a solution is find (at the first none of the robots completes the two laps)
 
 Average: 7.258064516
 
